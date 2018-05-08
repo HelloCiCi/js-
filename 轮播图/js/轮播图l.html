@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .lunbo {
+            position: relative;
+            height: 280px;
+            width: 520px;
+        }
+
+        .lunbo img {
+            position: absolute;
+            left: 0;
+            top:0;
+            display: none;
+        }
+
+        .lunbo .button {
+            position: absolute;
+            left: 15px;
+            top: 250px;
+            z-index: 20;
+            color: #fff;
+        }
+
+        .button span{
+            display: inline-block;
+            height: 25px;
+            width: 25px;
+            background: black;
+            margin-right: 3px;
+        }
+
+        .number{
+            position: absolute;
+            right: 15px;
+            top: 250px;
+            height: 30px;
+            width: 150px;
+            z-index: 20;
+        }
+
+        .number li{
+            float: left;
+            list-style: none;
+            height: 25px;
+            width: 30px;
+            background: black;
+            margin-right: 3px;
+            color: #fff;
+        }
+
+        .lunbo .show{
+            display: block;
+        }
+
+        .number .selected{
+            background: orange;
+        }
+    </style>
+</head>
+<body>
+<div class = "lunbo">
+    <img src = "img/1.jpg" alt = "tupian" class = "show">
+    <img src = "img/2.jpg" alt = "tupian">
+    <img src = "img/3.jpg" alt = "tupian">
+    <img src = "img/4.jpg" alt = "tupian">
+    <div class = "button">
+        <span id = "left">&lt;</span>
+        <span id = "right">&gt;</span>
+    </div>
+    <ul class = "number">
+        <li class = 'selected'>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+    </ul>
+</div>
+<script>
+
+    var oLeft = document.getElementById('left');
+    var oRight = document.getElementById('right');
+    var aImg = document.getElementsByTagName('img');
+    var aLi = document.getElementsByTagName('li');
+    var nowIndex = 0;
+
+    // for(var i = 0; i < aLi.length; i++){
+    //     aLi[i].index = i;
+    //     aLi[i].onmouseover = function(){
+    //         nowIndex = this.index;
+    //         for(var i = 0; i < aLi.length; i++){
+    //             aLi[i].className = "";
+    //             aImg[i].className = "";
+    //         }
+    //         aLi[index].className = 'selected';
+    //         aImg[index].className = 'show';
+    //     }
+    // }
+
+    // for(var i = 0;i < aLi.length;i++){
+    //     aLi[i].index = i;
+    //     aLi[i].onmouseover = function(){
+    //         nowIndex = this.index;
+    //         for(var i = 0;i < aLi.length;i++){
+    //             aLi[i].className = "";
+    //             aImg[i].className = "";
+    //         }
+    //         aLi[this.index].className = "selected";
+    //         aImg[this.index].className = "show";
+    //     }
+    // };
+    //
+    // oLeft.onclick = oRight.onclick= function(){
+    //     if(this == oLeft){
+    //         nowIndex--;
+    //         if(nowIndex < 0){
+    //             nowIndex = aImg.length - 1;
+    //         }
+    //     }else if(this == oRight){
+    //         nowIndex++;
+    //         if(nowIndex >= aImg.length){
+    //             nowIndex = 0;
+    //         }
+    //     }
+    //     for(let i = 0; i < aImg.length; i++){
+    //         aImg[i].className = "";
+    //         aLi[i].className = "";
+    //     }
+    //
+    //     aImg[nowIndex].className = 'show';
+    //     aLi[nowIndex].className = 'selected';
+    // }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

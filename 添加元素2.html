@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // 在数组 arr 的 index 处添加元素 item。不要直接修改数组 arr，结果返回新的数组
+    // 示例1
+    // 输入
+    //
+    //     [1, 2, 3, 4], 'z', 2
+
+
+    function insert(arr, item, index) {
+        for(var i = 0; i < arr.length; i++){
+            arr.splice(2,0,'z');
+        }
+
+        console.log(arr);
+    }
+
+    insert([1, 2, 3, 4], 'z', 2);
+
+
+
+</script>
+</body>
+</html>

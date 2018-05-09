@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <title>Title</title>
     <style>
         *{
             margin: 0px;
@@ -22,7 +22,7 @@
         }
 
         .contain{
-           height: 96px;
+            height: 96px;
             /*border: 1px solid black;*/
             display: none;
         }
@@ -35,32 +35,7 @@
             border: 1px solid black;
         }
 
-
-
     </style>
-    <script>
-        window.onload = function(){
-            var oDiv = document.getElementById("first");
-            var aH3 = oDiv.getElementsByTagName("h3");
-            var aUl = oDiv.getElementsByTagName("ul");
-
-            var flag = false;
-
-            for(var i = 0;i < aH3.length;i++){
-
-                aH3[i].index = i;
-                aH3[i].onclick = function(){
-                    if(!flag){
-                        aUl[this.index].style.display = 'block';
-                        flag = !flag;
-                    }else{
-                        aUl[this.index].style.display = 'none';
-                        flag = !flag;
-                    }
-                }
-            }
-        };
-    </script>
 </head>
 <body>
 <div id = "first">
@@ -77,6 +52,56 @@
         <li>003</li>
     </ul>
 </div>
+<script>
+    var oFirst = document.getElementById('first');
+    var aH3 = oFirst.getElementsByTagName('h3');
+    var aUl = document.getElementsByClassName('contain');
+
+    for(var i = 0; i < aH3.length; i++) {
+        aH3[i].index = i;
+        aH3[i].onclick = function () {
+            if(aUl[this.index].style.display = 'none'){
+                aUl[this.index].style.display = 'block';
+            }else{
+                aUl[this.index].style.display = 'none';
+            }
+        };
+    }
+    console.log(aH3,aUl);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
 
 </body>
 </html>
